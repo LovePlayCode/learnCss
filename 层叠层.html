@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 创建第一个层 */
+        @layer layout {
+            main {
+                display: grid;
+            }
+
+            div {
+                width: 500px;
+            }
+        }
+
+        /* 创建第二个层：一个未命名的匿名层 */
+        @layer {
+            body {
+                margin: 0;
+            }
+        }
+
+        /* 创建第三和第四个层：`theme` 和 `utilities` */
+        @layer theme, layout, utilities;
+
+        /* 向已经存在的 `layout` 层添加样式 */
+        @layer layout {
+            main {
+                color: #000;
+            }
+        }
+
+        /* 创建第五个层：一个未命名的匿名层 */
+        @layer {
+            body {
+                margin: 1vw;
+                color: red !important;
+            }
+        }
+
+        body {
+            color: #333 !important;
+        }
+
+        div {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>测试</div>
+</body>
+
+</html>
