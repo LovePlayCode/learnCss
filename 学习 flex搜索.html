@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title</title>
+  <style>
+      .box {
+          width: 500px;
+          display: flex;
+      }
+
+      .box > * {
+          flex: 1 1 auto;
+      }
+      .one{
+          flex-shrink: 4;
+          width: 600px;
+      }
+
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="one">I One</div>
+  <div>Item Two</div>
+  <div>Item Three has more content and so has a larger size</div>
+</div>
+</body>
+</html>
