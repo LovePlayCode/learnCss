@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divContent {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            grid-template-areas:
+                "hd hd hd hd hd hd hd hd hd"
+                "lt lt lt gridContent gridContent gridContent gridContent rg rg"
+                "lt lt lt gridContent gridContent gridContent gridContent rg rg"
+                "ft ft ft ft ft ft ft ft ft";
+            background-color: #bfa;
+        }
+
+        .header {
+            grid-area: hd;
+            background-color: darkblue;
+        }
+
+        .left {
+            grid-area: lt;
+            background-color: darkkhaki;
+        }
+
+        .content {
+            grid-area: gridContent;
+            background-color: black;
+        }
+
+        .right {
+            grid-area: rg;
+            background-color: darkorange;
+        }
+
+        .footer {
+            grid-area: ft;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="divContent">
+        <div class="header">header</div>
+        <div class="left">left</div>
+        <div class="content">content</div>
+        <div class="right">right</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html>

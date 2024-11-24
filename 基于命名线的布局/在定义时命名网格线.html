@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divContent {
+            display: grid;
+            grid-template-columns: [main-start] 50px [content-start] 1fr [content-end] 1fr [right-end];
+            grid-auto-rows: 200px;
+            background-color: #bfa;
+        }
+
+        .left {
+            grid-column-start: main-start;
+            background-color: darkgoldenrod;
+        }
+
+        .content {
+
+            grid-column-start: content-start;
+            grid-column-end: content-end;
+            background-color: darkmagenta;
+        }
+
+        .right {
+            grid-column-start: content-end;
+            background-color: khaki;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="divContent">
+        <div class="left">left</div>
+        <div class="content">content</div>
+        <div class="right">right</div>
+    </div>
+</body>
+
+</html>
