@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title</title>
+  <style>
+    .fixed{
+        display: inline-block;
+        width: 200px;
+        vertical-align: top;
+    }
+    .fixed,.auto{
+        height: 300px;
+        outline: solid 1px blue;
+    }
+    .auto{
+        width: 100%;
+        display: inline-block;
+        margin-left: -220px;
+        padding-left: 200px;
+        box-sizing: border-box;
+        outline: solid 1px #bfa;
+        vertical-align: top;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="fixed"></div>
+    <div class="auto"></div>
+  </div>
+</body>
+</html>
