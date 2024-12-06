@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            display: grid;
+            width: 100vw;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            background-color: #bfa;
+            /* grid-template-areas:
+                'item item item'
+                'item item item'
+                'item item item'; */
+            column-gap: 10px;
+            row-gap: 10px;
+
+        }
+
+        .item {
+            height: 0;
+            /* grid-area: item; */
+            background-color: aqua;
+            padding-top: 200%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+<script>
+    /**
+     * 用 css 实现如下的多列布局（类似九宫格，右下角为空）效果：父元素宽度自适应所在容器宽度，
+     * 高度由子元素撑开，有不定数量的直接子元素（可以用8个演示），每一行排3 个子元素，子元素之间的水平、
+     * 垂直间距为 10px ，子元素的宽度自适应父元素的宽度（(父元素宽度 - 10px * 2) / 3），
+     * 子元素的高度与自身的宽度成正比（比如 2:1 ）。
+     * */
+
+</script>
+
+</html>
