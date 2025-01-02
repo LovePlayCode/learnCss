@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>
+        输入:
+        <input id="myInput" />
+    </label>
+
+
+</body>
+<script>
+    /**
+     * 
+     * 页面有一个输入框，当用户连续不断输入时，
+     * 不打印用户输入的内容，当用户停止输入1S后，在控制台打印用户输入的内容
+     * */
+    const myInput = document.getElementById('myInput')
+    function main(time) {
+        let id = ''
+        let startTime = Date.now()
+        return (value) => {
+            let end = Date.now()
+
+            if (end - startTime >= time) {
+                console.log(value)
+                startTime = end
+            }
+        }
+    }
+    const fn = main(1000)
+    myInput.addEventListener('input', (e) => {
+
+        fn(e.target.value)
+    })
+</script>
+
+</html>
